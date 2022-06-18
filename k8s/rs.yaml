@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: bootcamp
+  labels:
+    app: bootcamp
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      app: bootcamp
+  template:
+    metadata: 
+      labels: 
+        app: bootcamp
+    spec:
+      containers:
+      - name: bootcamp
+        image: gcr.io/google-samples/kubernetes-bootcamp:v1
