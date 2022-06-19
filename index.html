@@ -28,21 +28,25 @@
 
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
-			<section data-background="#dddddd">
+			<section data-background="#9da5a5">
 				<a href="https://kubernetes.io/docs/home/">
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Kubernetes_logo.svg" alt="Kubernetes"
 						style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
 				</a>
 			</section>
 
-			<section>
+			<section data-background="#101214">
 				<h2>Why</h2>
 
 				<div class="r-hstack justify-center">
 					<div data-id="box1"
-						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">1</div>
+						style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+						<p style="font-size:10px;  text-align: center;">APP</p>
+					</div>
 					<div data-id="box2"
-						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">2</div>
+						style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+						<p style="font-size:10px;   text-align: center;">APP</p>
+					</div>
 				</div>
 
 				<aside class="notes">
@@ -51,35 +55,49 @@
 				</aside>
 			</section>
 
-			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+			<section data-background="#101214" data-auto-animate
+				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 				<div class="r-hstack justify-center">
 					<div data-id="container1"
-						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">1</div>
+						style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+						<p style="font-size:10px;  text-align: center;">APP</p>
+
+					</div>
+
 					<div data-id="container2"
-						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">2</div>
+						style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+
+						<p style="font-size:10px;   text-align: center;">APP</p>
+
+					</div>
 				</div>
 			</section>
 
 
-			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+			<section data-background="#101214" data-auto-animate
+				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 
 				<div class="r-hstack justify-center">
 					<div data-id="pod1" data-auto-animate-delay="0"
-						style="background: cyan; width: 200px; height: 150px; margin: 10px;">
+						style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
 						<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
 
 
 						<div data-id="container1"
-							style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">1
+							style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+
+							<p style="font-size:10px;  text-align: center;">APP</p>
 						</div>
 					</div>
 
 					<div data-id="pod2" data-auto-animate-delay="0.1"
-						style="background: magenta; width: 200px; height: 150px; margin: 10px;">
+						style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
 						<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
 
 						<div data-id="container2"
-							style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">2
+							style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+							<p style="font-size:10px;   text-align: center;">APP</p>
+
 						</div>
 					</div>
 
@@ -87,29 +105,34 @@
 
 			</section>
 
-			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+			<section data-background="#101214" data-auto-animate
+				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 
 				<div class="r-hstack justify-center">
 
 					<div data-id="replica1" data-auto-animate-delay="0"
-						style="background: white; width: 500px; height: 170px; margin: 10px;">
+						style="background: #cfbba4; width: 500px; height: 170px; margin: 10px;">
 
 						<div class="r-hstack justify-center">
 							<div data-id="pod1" data-auto-animate-delay="0"
-								style="background: cyan; width: 200px; height: 150px; margin: 10px;">
+								style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
 								<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
 								<div data-id="container1"
-									style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
-									1</div>
+									style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+
+									<p style="font-size:10px;  text-align: center;">APP</p>
+								</div>
 							</div>
 
 							<div data-id="pod2" data-auto-animate-delay="0.1"
-								style="background: magenta; width: 200px; height: 150px; margin: 10px;">
+								style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
 								<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
 
 								<div data-id="container2"
-									style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
-									2</div>
+									style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+									<p style="font-size:10px;   text-align: center;">APP</p>
+
+								</div>
 							</div>
 						</div>
 					</div>
@@ -118,52 +141,61 @@
 
 			</section>
 
-			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+			<section data-background="#101214" data-auto-animate
+				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 				<div class="r-hstack justify-center">
 					<div data-id="deployment1" data-auto-animate-delay="0"
-						style="background: white; width: 420px; height: 400px; margin: 10px;">
+						style="background: #97867d; width: 420px; height: 400px; margin: 10px;">
 						<div data-id="replica2" data-auto-animate-delay="0"
-							style="background: white; width: 400px; height: 170px; margin: 10px;">
+							style="background: #cfbba4; width: 400px; height: 170px; margin: 10px;">
 
 							<div class="r-hstack justify-center">
 								<div data-id="pod1" data-auto-animate-delay="0"
-									style="background: cyan; width: 200px; height: 150px; margin: 10px;">
+									style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
 									<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
 									<div data-id="container1"
-										style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
-										1</div>
+										style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+
+										<p style="font-size:10px;  text-align: center;">APP</p>
+									</div>
 								</div>
 
 								<div data-id="pod2" data-auto-animate-delay="0.1"
-									style="background: magenta; width: 200px; height: 150px; margin: 10px;">
+									style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
 									<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
 
 									<div data-id="container2"
-										style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
-										2</div>
+										style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+										<p style="font-size:10px;   text-align: center;">APP</p>
+
+									</div>
 								</div>
 							</div>
 						</div>
 
 						<div data-id="replica1" data-auto-animate-delay="0"
-							style="background: white; width: 400px; height: 170px; margin: 10px;">
+							style="background: #cfbba4; width: 400px; height: 170px; margin: 10px;">
 
 							<div class="r-hstack justify-center">
 								<div data-id="pod1" data-auto-animate-delay="0.2"
-									style="background: cyan; width: 200px; height: 150px; margin: 10px;">
+									style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
 									<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
 									<div data-id="container1"
-										style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
-										1</div>
+										style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+
+										<p style="font-size:10px;  text-align: center;">APP</p>
+									</div>
 								</div>
 
 								<div data-id="pod2" data-auto-animate-delay="0.3"
-									style="background: magenta; width: 200px; height: 150px; margin: 10px;">
+									style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
 									<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
 
 									<div data-id="container2"
-										style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
-										2</div>
+										style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+										<p style="font-size:10px;   text-align: center;">APP</p>
+
+									</div>
 								</div>
 							</div>
 						</div>
@@ -172,35 +204,40 @@
 			</section>
 
 
-			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+			<section data-background="#101214" data-auto-animate
+				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 				<div class="r-vstack justify-center">
 
 					<div data-id="service1" data-auto-animate-delay="0"
-						style="background: grey; width: 100px; height: 50px; margin: 10px;">
+						style="background: #b9dcd8; width: 100px; height: 50px; margin: 10px;">
 						<p style="font-size: 24px; text-align: center;"> service</p>
 					</div>
 
 					<div data-id="deployment1" data-auto-animate-delay="0"
-						style="background: white; width: 420px; height: 200px; margin: 10px;">
+						style="background: #97867d; width: 420px; height: 200px; margin: 10px;">
 						<div data-id="replica2" data-auto-animate-delay="0"
-							style="background: white; width: 400px; height: 170px; margin: 10px;">
+							style="background: #cfbba4; width: 400px; height: 170px; margin: 10px;">
 
 							<div class="r-hstack justify-center">
 								<div data-id="pod1" data-auto-animate-delay="0"
-									style="background: cyan; width: 200px; height: 150px; margin: 10px;">
+									style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
 									<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
 									<div data-id="container1"
-										style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
-										1</div>
+										style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+
+										<p style="font-size:10px;  text-align: center;">APP</p>
+									</div>
 								</div>
 
 								<div data-id="pod2" data-auto-animate-delay="0.1"
-									style="background: magenta; width: 200px; height: 150px; margin: 10px;">
+									style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
 									<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
 
 									<div data-id="container2"
-										style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
-										2</div>
+										style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+										<p style="font-size:10px;   text-align: center;">APP</p>
+
+									</div>
 								</div>
 							</div>
 						</div>
@@ -209,51 +246,57 @@
 			</section>
 
 
-			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+			<section data-background="#101214" data-auto-animate
+				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 				<div class="r-vstack justify-center">
 
 					<div data-id="ingress" data-auto-animate-delay="0"
-						style="background: grey; width: 100px; height: 50px; margin: 10px;">
+						style="background: #74c5c0; width: 100px; height: 50px; margin: 10px;">
 						<p style="font-size: 24px; text-align: center;"> ingress</p>
 					</div>
 
 
 					<div data-id="service1" data-auto-animate-delay="0"
-						style="background: grey; width: 100px; height: 50px; margin: 10px;">
+						style="background: #b9dcd8; width: 100px; height: 50px; margin: 10px;">
 						<p style="font-size: 24px; text-align: center;"> service</p>
 					</div>
 
 					<div data-id="deployment1" data-auto-animate-delay="0"
-						style="background: white; width: 420px; height: 200px; margin: 10px;">
+						style="background: #97867d; width: 420px; height: 200px; margin: 10px;">
 						<div data-id="replica2" data-auto-animate-delay="0"
-							style="background: white; width: 400px; height: 170px; margin: 10px;">
+							style="background: #cfbba4; width: 400px; height: 170px; margin: 10px;">
 
 							<div class="r-hstack justify-center">
 								<div data-id="pod1" data-auto-animate-delay="0"
-									style="background: cyan; width: 200px; height: 150px; margin: 10px;">
+									style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
 									<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
 									<div data-id="container1"
-										style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
-										1</div>
+										style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+
+										<p style="font-size:10px; display: flex; justify-content: center;">APP</p>
+									</div>
 								</div>
 
 								<div data-id="pod2" data-auto-animate-delay="0.1"
-									style="background: magenta; width: 200px; height: 150px; margin: 10px;">
+									style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
 									<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
 
 									<div data-id="container2"
-										style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
-										2</div>
+										style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+										<p style="font-size:10px;   text-align: center;">APP</p>
+
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-				<section data-background="#dddddd">
+			<section data-background="#101214">
 				<a href="https://kubernetes.io/docs/home/">
 					<img src="images/full-kubernetes-model-architecture.png" alt="Kubernetes architecture"
-						style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+						style="width: 480px; height: 280px; margin: 0 auto 4rem auto; background: transparent;"
+						class="demo-logo">
 				</a>
 			</section>
 
