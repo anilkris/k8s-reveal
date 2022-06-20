@@ -28,6 +28,10 @@
 
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
+
+			<section data-background="#101214">
+				<h2 style="text-transform: capitalize;"> An App's Journey to Deployment</h2>
+			</section>
 			<section data-background="#9da5a5">
 				<a href="https://kubernetes.io/docs/home/">
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Kubernetes_logo.svg" alt="Kubernetes"
@@ -74,6 +78,7 @@
 			</section>
 
 
+
 			<section data-background="#101214" data-auto-animate
 				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 
@@ -104,6 +109,24 @@
 				</div>
 
 			</section>
+
+			<section data-auto-animate>
+				<h2 data-id="code-title">Pod</h2>
+				<pre data-id="code-animation"><code class="hlyaml" data-trim data-line-numbers>
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bootcamp
+  namespace: bootcamp
+  labels:
+    app: bootcamp
+spec:
+  containers: 
+  - name: bootcamp
+    image: gcr.io/google-samples/kubernetes-bootcamp:v1
+
+					</code></pre>
+				</section>
 
 			<section data-background="#101214" data-auto-animate
 				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
@@ -141,7 +164,100 @@
 
 			</section>
 
+			<section data-auto-animate>
+				<h2 data-id="code-title">ReplicaSet</h2>
+				<pre data-id="code-animation"><code class="hlyaml" data-trim data-line-numbers>
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: bootcamp
+  namespace: bootcamp
+  labels:
+    app: bootcamp
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      app: bootcamp
+  template:
+    metadata: 
+      labels: 
+        app: bootcamp
+    spec:
+      containers:
+      - name: bootcamp
+        image: gcr.io/google-samples/kubernetes-bootcamp:v1
+					</code></pre>
+				</section>
+
 			<section data-background="#101214" data-auto-animate
+				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+				<div class="r-hstack justify-center">
+					<div data-id="deployment1" data-auto-animate-delay="0"
+						style="background: #97867d; width: 420px; height: 200px; margin: 10px;">
+						<p style="position:absolute;font-size:8px;  margin: 0px; text-align: left;">Deployment</p>
+				<div data-id="replica1" data-auto-animate-delay="0"
+							style="backdrop-filter: blur(5px); background: #cfbba4; width: 400px; height: 170px; margin: 10px;">
+							<p style="position:absolute;font-size:8px;  margin-top: 0px; text-align: left;">Old Replica
+							</p>
+							<div class="r-hstack justify-center">
+								<div data-id="pod1" data-auto-animate-delay="0.2"
+									style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
+									<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
+									<div data-id="container1"
+										style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+
+										<p style="font-size:10px;  text-align: center;">APP</p>
+									</div>
+								</div>
+
+								<div data-id="pod2" data-auto-animate-delay="0.3"
+									style="background: #494e4e; width: 200px; height: 150px; margin: 10px;">
+									<p style="font-size:11px;  margin-left: 2px; text-align: left;">Pod</p>
+
+									<div data-id="container2"
+										style="background: #228a84; width: 50px; height: 50px; margin: 10px; border-radius: 5px;">
+										<p style="font-size:10px;   text-align: center;">APP</p>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+				<section data-auto-animate>
+				<h2 data-id="code-title">Deployment</h2>
+				<pre data-id="code-animation"><code class="hlyaml" data-trim data-line-numbers>
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bootcamp
+  namespace: bootcamp
+  labels:
+    app: bootcamp
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      app: bootcamp
+  template:
+    metadata: 
+      labels: 
+        app: bootcamp
+    spec:
+      containers:
+      - name: bootcamp
+        image: gcr.io/google-samples/kubernetes-bootcamp:v1
+					</code></pre>
+				</section>
+
+				<section data-background="#101214">
+						<h4 font-size="20px">ReplicaSet vs Deployment</h4>
+				</section>
+
+						<section data-background="#101214" data-auto-animate
 				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 				<div class="r-hstack justify-center">
 					<div data-id="deployment1" data-auto-animate-delay="0"
@@ -213,8 +329,8 @@
 					<div data-id="deployment1" data-auto-animate-delay="0"
 						style="background: #97867d; width: 420px; height: 400px; margin: 10px;">
 						<p style="position:absolute;font-size:8px;  margin: 0px; text-align: left;">Deployment</p>
-						<div data-id="replica2" data-auto-animate-delay="6.0" 
-						style="background: #cfbba4; width: 400px; height: 170px; margin: 10px; margin-top:15px;">
+						<div data-id="replica2" data-auto-animate-delay="6.0"
+							style="background: #cfbba4; width: 400px; height: 170px; margin: 10px; margin-top:15px;">
 							<p style="position:absolute;font-size:8px;  margin-top: 0px; text-align: left;">New Replica
 							</p>
 
