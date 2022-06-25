@@ -110,6 +110,26 @@
 
 			</section>
 
+			<section>
+				<p font-size="15"> How Many containers can be in a pod?</p>
+					<ul>
+
+						<li>2</li>
+						<li>10</li>
+						<span class="fragment highlight-green">
+							<li>
+							1 
+							</li>
+							<li>
+							more than 50 
+							</li>
+						</span>
+					</ul>
+						<p class="fragment fade-in-then-out">		
+							The "one-container-per-Pod" model is the most common Kubernetes use case
+						</p>
+			</section>
+			
 			<section data-auto-animate>
 				<h2 data-id="code-title">Pod</h2>
 				<pre data-id="code-animation"><code class="hlyaml" data-trim data-line-numbers>
@@ -257,7 +277,7 @@ spec:
 						<h4 font-size="20px">ReplicaSet vs Deployment</h4>
 				</section>
 
-						<section data-background="#101214" data-auto-animate
+				<section data-background="#101214" data-auto-animate
 				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 				<div class="r-hstack justify-center">
 					<div data-id="deployment1" data-auto-animate-delay="0"
