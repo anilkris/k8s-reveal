@@ -110,29 +110,12 @@
 
 			</section>
 
-			<section>
-				<p font-size="15"> How Many containers can be in a pod?</p>
-					<ul>
-
-						<li>2</li>
-						<li>10</li>
-						<span class="fragment highlight-green">
-							<li>
-							1 
-							</li>
-							<li>
-							more than 50 
-							</li>
-						</span>
-					</ul>
-						<p class="fragment fade-in-then-out">		
-							The "one-container-per-Pod" model is the most common Kubernetes use case
-						</p>
-			</section>
-			
+		
 			<section data-auto-animate>
 				<h2 data-id="code-title">Pod</h2>
-				<pre data-id="code-animation"><code class="hlyaml" data-trim data-line-numbers>
+				<pre data-id="code-animation">
+					<code class="yaml" data-trim data-line-numbers="2|4|5|6-7|11">
+					<script type="text/template">
 apiVersion: v1
 kind: Pod
 metadata:
@@ -145,7 +128,7 @@ spec:
   - name: bootcamp
     image: gcr.io/google-samples/kubernetes-bootcamp:v1
 
-					</code></pre>
+				</script></code></pre>
 				</section>
 
 			<section data-background="#101214" data-auto-animate
@@ -186,7 +169,7 @@ spec:
 
 			<section data-auto-animate>
 				<h2 data-id="code-title">ReplicaSet</h2>
-				<pre data-id="code-animation"><code class="hlyaml" data-trim data-line-numbers>
+				<pre data-id="code-animation"><code class="yaml" data-trim data-line-numbers="2|9|10-12">
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -249,7 +232,8 @@ spec:
 
 				<section data-auto-animate>
 				<h2 data-id="code-title">Deployment</h2>
-				<pre data-id="code-animation"><code class="hlyaml" data-trim data-line-numbers>
+				<pre data-id="code-animation">
+				<code class="yaml" data-trim data-line-numbers="2|9|10-12">
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -274,7 +258,16 @@ spec:
 				</section>
 
 				<section data-background="#101214">
-						<h4 font-size="20px">ReplicaSet vs Deployment</h4>
+						<h4 font-size="20px"><p>ReplicaSet</p> vs <p> Deployment</p></h4>
+
+						<p style="font-size:13px; margin: 50px;"class="fragment">Both are almost same except for....</p>
+						<p style="font-size:15px; margin: 20px;"><span class="fragment">... Rolling Uprade</span> </p>
+
+							<aside class="notes">
+								A ReplicaSet ensures that a number of Pods is created in a cluster. The pods are called replicas and are the mechanism of availability in Kubernetes. But changing the ReplicaSet will not take effect on existing Pods, so it is not possible easily change, for example, the image version.
+
+								A deployment is a higher abstraction that manages one or more ReplicaSets to provide controlled rollout of a new version. When the image version is changed in the Deployment, a new ReplicaSet for this version will be created with initially zero replicas. Then it will be scaled to one replica, after that is running, the old ReplicaSet will be scaled down. (The number of newly created pods, the step size so to speak, can be tuned.)
+				</aside>
 				</section>
 
 				<section data-background="#101214" data-auto-animate
@@ -499,15 +492,82 @@ spec:
 					</div>
 				</div>
 			</section>
-			<section data-background="#101214">
-				<a href="https://kubernetes.io/docs/home/">
-					<img src="images/full-kubernetes-model-architecture.png" alt="Kubernetes architecture"
-						style="width: 480px; height: 280px; margin: 0 auto 4rem auto; background: transparent;"
-						class="demo-logo">
-				</a>
+		
+
+			<section>
+				<p style="font-size:35px;"> How Many containers can be in a pod?</p>
+					<ol style="font-size:15px; list-style-type: upper-alpha;">
+
+
+						<li style="background-color:#333333;text-align: center; padding-left: 10px; padding-right:10px; margin: 13px;">2</li>
+						<li style="background-color:#333333;text-align: center;padding-left: 10px; padding-right:10px; margin: 13px;">10</li>
+
+						<span class="fragment highlight-green">
+							<li style="background-color:#333333; padding-left: 10px; padding-right:10px; text-align: center;margin: 13px;">
+							1 
+							</li>
+							<li style="background-color:#333333; padding-left: 10px; padding-right:10px; text-align: center; margin: 13px;">
+							More than 50 
+							</li>
+						</span>
+					</ol>
+						<p style="font-size: 35px;" class="fragment fade-in-then-out">		
+							The "one-container-per-Pod" model is the most common Kubernetes use case
+						</p>
 			</section>
+		
+			<section>
+				<p style="font-size:35px;"> How A Service identifies the pod?</p>
+					<ol style="font-size:13px; list-style-type: upper-alpha;">
 
 
+						<li style="background-color:#333333;text-align: center; padding-left: 10px; padding-right:10px; margin: 13px;">Namespace</li>
+						<li style="background-color:#333333;text-align: center; padding-left: 10px; padding-right:10px; margin: 13px;">Name</li>
+
+						<span class="fragment highlight-green">
+							<li style="background-color:#333333; text-align: center; padding-left: 10px; padding-right:10px; margin: 13px;">
+							Label 
+							</li>
+						</span>
+							<li style="background-color:#333333; text-align: center; padding-left: 10px; padding-right:10px; margin: 13px;">
+							UUID 
+							</li>
+
+					</ol>
+						
+			</section>
+			
+
+			<section>
+				<p style="font-size:35px;"> Difference between Cloud based K8s and self managed K8s?
+			
+					<img style="background-color: white;" src="images/components-of-kubernetes.svg" alt="Kubernetes architecture"
+						style="width: 480px; height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="fragment"
+						class="architecture">
+					
+			</p>
+
+					
+			</section>
+			
+			<section>
+				<p style="font-size:35px;"> Secrets in Kubernetes are encrypted. True or False?
+					<ol style="font-size:18px; list-style-type: upper-alpha;">
+
+				<span class="fragment highlight-green">
+							<li style=" text-align: center;margin: 13px;">
+							False 
+							</li>
+						</span>
+							<li style=" text-align: center;margin: 13px;">
+							True 
+							</li>
+
+					</ol>
+			</p>
+
+					
+			</section>
 
 		</div>
 
