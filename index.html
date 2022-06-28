@@ -56,7 +56,7 @@
 				</div>
 
 
-				<h2 style="text-transform: capitalize; font-size: 20px;">Make an App into container and live happily
+				<h2 style="text-transform: capitalize; font-size: 20px;">An App becomes container and lives happily
 					ever after</h2>
 
 			</section>
@@ -65,9 +65,11 @@
 			<section  data-transition="zoom" data-background="#101214" data-auto-animate
 				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 
-				<h2 style="text-transform: capitalize; font-size: 20px;">Make an App into container and live happily
+				<h2 style="text-transform: capitalize; font-size: 20px;"> An App becomes container and lives happily
 					ever after
 				</h2>
+
+
 				<div class="r-hstack justify-center">
 					<div data-id="box1"
 						style="background: grey; width: 70px; height: 80px; margin: 10px; border-radius: 5px;">
@@ -85,6 +87,10 @@
 						</div>
 					</div>
 				</div>
+
+					<p style="text-transform: capitalize; font-size: 15px;" class="fragment">
+						except it's not...</p>
+					
 
 				<aside class="notes">
 					Why can't we use containers?
@@ -111,7 +117,7 @@
 
 			<section data-transition="zoom" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)" data-background="#101214">
 					<div class="r-stack">
-						<div data-id="box1" style="background: cyan; width: 200px; height: 200px; border-radius: 200px;"></div>
+						<div data-id="box1" style="background: cyan; width: 150px; height: 150px; border-radius: 200px;"></div>
 						<div data-id="box2" style="background: magenta; width: 100px; height: 100px; border-radius: 200px;"></div>
 						<div data-id="box3" style="background: yellow; width: 50px; height: 50px; border-radius: 200px;"></div>
 					</div>
@@ -122,11 +128,28 @@
 				
 			</section>
 
-			<section data-background="#9da5a5">
+			<section data-transition="zoom" data-background="#9da5a5">
 				<a href="https://kubernetes.io/docs/home/">
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Kubernetes_logo.svg" alt="Kubernetes"
 						style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
 				</a>
+
+				<aside class="notes">
+					<ul>
+						<li>
+							Fault tolerance	
+						</li>
+						<li>
+							Storage orchestration
+						</li>
+						<li>
+							Automated rollouts and rollbacks
+						</li>
+						<li>
+							Self-healing
+						</li>
+					</ul>
+				</aside>
 			</section>
 
 			<section data-background="#101214" data-auto-animate
@@ -578,6 +601,22 @@ spec:
 				<p style="font-size: 35px;" class="fragment fade-in-then-out">
 					The "one-container-per-Pod" model is the most common Kubernetes use case
 				</p>
+				<aside class="notes">
+					<ul>
+						<li>
+							No more than 110 pods per node
+						</li>
+						<li>
+							No more than 5000 nodes
+						</li>
+						<li>
+							No more than 150000 total pods
+						</li>
+						<li>
+							No more than 300000 total containers
+						</li>
+					</ul>
+				</aside>
 			</section>
 
 			<section>
